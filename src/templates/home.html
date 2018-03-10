@@ -4,20 +4,24 @@ title: Index page
 {% extends "layouts/_layout.html" %}
 
 {% block content %}
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-sm">
+			{# variable example #}
+			<h1>{{title}}</h1>
 
-	{# variable example #}
-	<h1>{{title}}</h1>
 
+			{# partial example #}
+			{% include "partials/_header.html" %}
 
-	{# partial example #}
-	{% include "partials/_header.html" %}
+			{# data usage example #}
+				{% import "data/data.html" as tests %}
 
-	{# data usage example #}
-		{% import "data/data.html" as tests %}
-
-		{% for test in tests.list %}
-		<li>{{test.title}}</li>
-		{% endfor %}
-	{# end of example #}
-
+				{% for test in tests.list %}
+				<li>{{test.title}}</li>
+				{% endfor %}
+			{# end of example #}
+		</div>
+	</div>
+</div>
 {% endblock %}
