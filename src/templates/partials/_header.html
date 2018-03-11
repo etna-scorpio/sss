@@ -1,1 +1,52 @@
-<p>Hello from partials/_header.html</p>
+{% set nav = ['About us', 'Services', 'Useful links', 'Contact us'] %}
+{% set dropdownMenu = ['Personal Injury', 'Buying and Selling Property', 'Business Law', 'Employment Law', 'Matrimonial Law', 'Wills & Estates'] %}
+
+<header class="header">
+	<div class="header__top">
+		<div class="container container--center">
+			<div class="row">
+				<div class="col">
+					<div class="row">
+						<div class="col">
+							<div class="header__contact">
+								<a href="mailto:info@stephenscottsolicitors.com" class="header__link"><i class="icon icon-email"></i><span>info@stephenscottsolicitors.com</span></a>
+							</div>
+							<div class="header__contact">
+								<a href="tel:02891821700" class="header__link"> <i class="icon icon-phone"></i><span>028 9182 1700</span></a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="header__bottom">
+		<div class="container container--center">
+			<div class="row">
+				<div class="col">
+					<a href="#" class="logo"><img src="img/logo.png" class="logo__pic" alt="Stephen Scott logo"></a>
+				</div>
+				<div class="col-5">
+					<nav class="navigation">
+						<ul class="navigation__list">
+							{% for navLink in nav %}
+								{% if loop.index == 2 %}
+								<li class="navigation__option">
+									<span class="navigation__link navigation__link--pointer"><span>{{ navLink }}</span></span>
+									<ul class="navigation-dropdown">
+										{% for item in dropdownMenu %}
+										<li class="navigation-dropdown__option"><a href="#" class="navigation-dropdown__link">{{ item }}</a></li>
+										{% endfor %}
+									</ul>
+								</li>
+								{% else %}
+								<li class="navigation__option"><a href="#" class="navigation__link"><span>{{ navLink }}</span></a></li>
+								{% endif %}
+							{% endfor %}
+						</ul>
+					</nav>
+				</div>
+			</div>
+		</div>
+	</div>
+</header>

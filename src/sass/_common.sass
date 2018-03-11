@@ -1,4 +1,28 @@
+$base-color: #55298A
+$help-color: #e2dcec
+$accent-color: #ffa800
+$light-grey: #eee
+$white: #fff
+$black: #000
+
+
 body
-  background: #FFF
+  background: $white
   line-height: 1.4
 
+a
+	&:hover
+		text-decoration: none
+
+.container
+	&.container--center
+		max-width: 1300px
+
+.icon
+	display: inline-block
+	vertical-align: middle
+
+.icon-phone
+	+s(phone)
+.icon-email
+	+s(email)

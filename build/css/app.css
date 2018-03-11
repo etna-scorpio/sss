@@ -78,11 +78,6 @@ html {
   fill: #000;
 }
 
-body {
-  background: #FFF;
-  line-height: 1.4;
-}
-
 /*!
  * Bootstrap v4.0.0 (https://getbootstrap.com)
  * Copyright 2011-2018 The Bootstrap Authors
@@ -5712,6 +5707,188 @@ a.text-dark:hover, a.text-dark:focus {
 
 .invisible {
   visibility: hidden !important;
+}
+
+body {
+  background: #fff;
+  line-height: 1.4;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+.container.container--center {
+  max-width: 1300px;
+}
+
+.icon {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.icon-phone {
+  background-image: url("../img/sprite.png");
+  width: 16px;
+  height: 15px;
+  background-position: -30px 0px;
+}
+
+.icon-email {
+  background-image: url("../img/sprite.png");
+  width: 16px;
+  height: 13px;
+  background-position: -30px -25px;
+}
+
+.header {
+  background: #55298A;
+  border-bottom: 1px solid #e2dcec;
+}
+
+.header__top {
+  padding: 5px 0 13px;
+  background: #6A4299;
+  background-image: linear-gradient(#6A4299 85%, #401870 100%);
+}
+
+.header__bottom {
+  padding: 10px 0;
+}
+
+.header__link {
+  color: #fff;
+}
+
+.header__link:hover {
+  color: inherit;
+}
+
+.header__link span {
+  vertical-align: middle;
+}
+
+.header__contact {
+  display: inline-block;
+  margin-right: 20px;
+  vertical-align: middle;
+  color: #fff;
+}
+
+.header .icon {
+  margin-right: 10px;
+}
+
+.logo {
+  max-width: 220px;
+}
+
+.logo__pic {
+  max-width: 100%;
+}
+
+.navigation {
+  padding-top: 15px;
+}
+
+.navigation__list {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.navigation__option {
+  position: relative;
+}
+
+.navigation__option:hover .navigation-dropdown {
+  opacity: 1;
+  visibility: visible;
+}
+
+.navigation__link {
+  display: block;
+  padding: 10px;
+  color: #fff;
+  transition: color 0.4s linear;
+}
+
+.navigation__link:hover {
+  color: #e2dcec;
+}
+
+.navigation__link:hover span:before {
+  -ms-transform: translateX(0);
+  transform: translateX(0);
+}
+
+.navigation__link--pointer {
+  cursor: pointer;
+}
+
+.navigation__link--pointer span:before {
+  display: none;
+}
+
+.navigation__link span {
+  position: relative;
+  display: block;
+  padding-bottom: 5px;
+  overflow: hidden;
+}
+
+.navigation__link span:before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: #fff;
+  -ms-transform: translateX(-100%);
+  transform: translateX(-100%);
+  transition: transform 0.2s ease;
+}
+
+.navigation-dropdown {
+  position: absolute;
+  z-index: 10;
+  background: #fff;
+  top: 100%;
+  left: 10px;
+  min-width: 180px;
+  border-radius: 4px;
+  border-top: 5px solid #ffa800;
+  opacity: 0;
+  visibility: hidden;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+  transition: opacity 0.2s ease, visibility 0.2s ease;
+}
+
+.navigation-dropdown__link {
+  display: block;
+  padding: 8px 15px;
+  color: #000;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.navigation-dropdown__link:hover {
+  background: #eef1f5;
+  color: inherit;
+}
+
+.hero__img {
+  height: 370px;
+  background-size: cover;
+  background-position: 100% 50%;
+  background-repeat: no-repeat;
+}
+
+.main {
+  background: #eee;
+  padding: 50px 0;
 }
 
 @media print {

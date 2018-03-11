@@ -4,24 +4,28 @@ title: Index page
 {% extends "layouts/_layout.html" %}
 
 {% block content %}
-<div class="container-fluid">
+{% include "partials/_header.html" %}
+<div class="container">
 	<div class="row">
-		<div class="col-sm">
-			{# variable example #}
-			<h1>{{title}}</h1>
 
-
-			{# partial example #}
-			{% include "partials/_header.html" %}
-
-			{# data usage example #}
-				{% import "data/data.html" as tests %}
-
-				{% for test in tests.list %}
-				<li>{{test.title}}</li>
-				{% endfor %}
-			{# end of example #}
-		</div>
 	</div>
 </div>
+<div class="hero">
+	<div class="hero__img" style="background-image: url(/img/scrabo-tower.jpg)"></div>
+</div>
+<main class="main">
+	<div class="container container--center">
+		<div class="row">
+			<div class="col">
+				<div class="main__in">
+					<p>Stephen Scott and Company is a solicitors practice in Newtownards that prides itself on delivering a first rate, efficient and personal service to private client individuals and businesses.</p>
+					<p>Based in Newtownards, North Down, Stephen Scott and Company Solicitors is only ten miles from Belfast.
+					Since its inception in 1998 by Stephen Scott, the firm has grown from strength to strength. Well known locally for its expertise in personal injury claims, matrimonial cases and property law, Stephen Scott & Co prides itself on the personal relationships it builds with its clients.</p>
+					<p>As a location, Newtownards is ideal. Situated at the mouth of Strangford Lough, the town has seen rapid expansion over the last twenty years and is now considered to be a dormitory town of Belfast, served by a main dual carriageway road network ensuring easy access to all major towns and cities.</p>
+					<p>With a client base of local businesses and entrepreneurs, Stephen Scott Solicitors concentrates primarily on the following areas of law:</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</main>
 {% endblock %}

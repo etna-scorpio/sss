@@ -1,6 +1,8 @@
 $icons: (0:0)
-$icons: map-merge($icons,('facebook': (X: -30px, Y:0px, W: 10px, H: 19px, TW: 40px, TH: 38px, IMG: '../img/sprite.png')))
-$icons: map-merge($icons,('facebook@2x': (X: 0px, Y:0px, W: 20px, H: 38px, TW: 40px, TH: 38px, IMG: '../img/sprite.png')))
+$icons: map-merge($icons,('email': (X: -30px, Y:-25px, W: 16px, H: 13px, TW: 66px, TH: 38px, IMG: '../img/sprite.png')))
+$icons: map-merge($icons,('facebook': (X: -56px, Y:0px, W: 10px, H: 19px, TW: 66px, TH: 38px, IMG: '../img/sprite.png')))
+$icons: map-merge($icons,('facebook@2x': (X: 0px, Y:0px, W: 20px, H: 38px, TW: 66px, TH: 38px, IMG: '../img/sprite.png')))
+$icons: map-merge($icons,('phone': (X: -30px, Y:0px, W: 16px, H: 15px, TW: 66px, TH: 38px, IMG: '../img/sprite.png')))
 
 
 // Gets an attribute from the sass map
@@ -37,15 +39,27 @@ $icons: map-merge($icons,('facebook@2x': (X: 0px, Y:0px, W: 20px, H: 38px, TW: 4
   +sprite-retina($i)  
 
 //
+//.icon-email
+//  width: 16px
+//  height: 13px
+//  background-image: url('../img/sprite.png')
+//  background-position: -30px -25px
+//
 //.icon-facebook
 //  width: 10px
 //  height: 19px
 //  background-image: url('../img/sprite.png')
-//  background-position: -30px 0px
+//  background-position: -56px 0px
 //
 //.icon-facebook@2x
 //  width: 20px
 //  height: 38px
 //  background-image: url('../img/sprite.png')
 //  background-position: 0px 0px
+//
+//.icon-phone
+//  width: 16px
+//  height: 15px
+//  background-image: url('../img/sprite.png')
+//  background-position: -30px 0px
 //
