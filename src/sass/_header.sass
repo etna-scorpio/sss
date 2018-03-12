@@ -1,9 +1,10 @@
 .header
 	background: $base-color
 	border-bottom: 1px solid $help-color
+	// background: $violet-grey
 	&__top
 		padding: 5px 0 13px
-		background: #6A4299
+		background-color: #6A4299
 		+g(#6A4299 85%, #401870 100%)
 	&__bottom
 		padding: 10px 0
@@ -23,15 +24,32 @@
 
 
 .logo
-	max-width: 220px
+	max-width: 200px
 	&__pic
 		max-width: 100%
 
 .navigation
-	padding-top: 15px
+	+media-breakpoint-down(sm)
+		position: fixed
+		background: $white
+		color: $black
+		top: 0
+		right: 0
+		bottom: 0
+		z-index: 10
+		opacity: 0
+		transform: translate3d(110%, 0, 0)
+		transition: opacity 0.3s ease, transform 0.5s ease
+		&.is-active
+			opacity: 1
+			transform: translate3d(0, 0, 0)
 	&__list
 		display: flex
 		justify-content: space-between
+		margin-bottom: 0
+		+media-breakpoint-down(sm)
+			display: block
+			width: 250px
 	&__option
 		position: relative
 		&:hover
@@ -43,6 +61,12 @@
 		padding: 10px
 		color: $white
 		+tr(color 0.4s linear)
+		+media-breakpoint-down(sm)
+			color: $black
+			border-bottom: 1px solid $light-grey
+			&:hover
+				color: $black
+				background: $light-grey
 		&:hover
 			color: $help-color
 			span
@@ -50,6 +74,8 @@
 					transform: translateX(0)
 		&--pointer
 			cursor: pointer
+			+media-breakpoint-down(sm)
+				border-bottom: none
 			span
 				&:before
 					display: none
@@ -58,6 +84,8 @@
 			display: block
 			padding-bottom: 5px
 			overflow: hidden
+			+media-breakpoint-down(sm)
+				padding-bottom: 0
 			&:before
 				content: ""
 				position: absolute
@@ -66,8 +94,10 @@
 				width: 100%
 				height: 1px
 				background: $white
-				transform: translateX(-100%)
+				transform: translateX(-105%)
 				+tr(transform 0.2s ease)
+				+media-breakpoint-down(sm)
+					display: none
 
 
 
@@ -84,6 +114,13 @@
 	visibility: hidden
 	box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1)
 	transition: opacity 0.2s ease, visibility 0.2s ease
+	+media-breakpoint-down(sm)
+		position: static
+		opacity: 1
+		visibility: visible
+		box-shadow: none
+		border-bottom: 5px solid $accent-color
+		border-radius: 0
 	&__link
 		display: block
 		padding: 8px 15px
@@ -93,3 +130,5 @@
 		&:hover
 			background: lighten(#E5E9EF, 3%)
 			color: inherit
+		+media-breakpoint-down(sm)
+			font-weight: normal

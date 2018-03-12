@@ -2,9 +2,71 @@
 	&__img
 		height: 370px
 		background-size: cover
-		background-position: 100% 50%
+		background-position: 50% 100%
 		background-repeat: no-repeat
 
-.main
+
+.content
 	background: $light-grey
-	padding: 50px 0
+	padding: 50px 0 40px
+	color: #3B3444
+	+media-breakpoint-up(sm)
+		padding: 70px 0 50px
+	&__img
+		&--top-right
+			display: block
+			margin: 0 auto 15px
+			+media-breakpoint-up(md)
+				margin-left: 20px
+
+
+/* features */
+.features
+	margin-top: 50px
+
+.feature-card
+	position: relative
+	display: block
+	max-width: 300px
+	min-height: 250px
+	margin: 0 auto 30px
+	background-color: $help-color
+	+cover
+	border-radius: 4px
+	transition: transform .2s ease
+	&:before
+		content: ""
+		position: absolute
+		top: 0
+		left: 0
+		right: 0
+		bottom: 0
+		background: rgba(#696969, 0.6)
+	&:hover
+		transform: translate3d(0, -2px, 0)
+		.feature-card__text
+			&:before
+				border-color: $accent-color
+	&__el
+		position: relative
+		width: 100%
+		padding: 0 10px
+		text-align: center
+		color: $white
+	&__text
+		position: relative
+		margin-bottom: 0
+		font-size: 19px
+		font-weight: 500
+		text-transform: uppercase
+		letter-spacing: 0.4px
+		&:before
+			content: ""
+			position: absolute
+			top: 100%
+			left: 50%
+			width: 20%
+			margin-top: 15px
+			margin-left: -10%
+			border-bottom: 2px solid $white
+			transition: border-color .4s linear

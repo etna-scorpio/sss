@@ -24,7 +24,7 @@
     #{$property}: #{$min-size}#{$unit}
   @media (min-width: #{$max-width}#{$unit})
     #{$property}: #{$max-size}#{$unit}
-    
+
 =fs($sizeValue: 16)
   font-size: $sizeValue + px
   font-size: $sizeValue / 10 + rem
@@ -82,9 +82,9 @@
   background-image: linear-gradient($color1, $color2)
 
 =gh($color1, $color2)
-  background-image: linear-gradient(left, $color1, $color2)
+  background-image: linear-gradient(to right, $color1, $color2)
 
-// font-family 
+// font-family
 =font($alias, $name)
   @font-face
     font-family: $alias

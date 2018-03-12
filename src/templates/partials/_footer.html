@@ -1,0 +1,46 @@
+{% set footerMenu = ['Personal Injury', 'Buying and Selling Property', 'Business Law', 'Employment Law', 'Matrimonial Law', 'Wills & Estates'] %}
+
+<footer class="footer">
+	<div class="footer__top">
+		<div class="text-center">
+			<img class="img-fluid" src="img/law-society-logo-white.png" alt="law-society-logo">
+		</div>
+	</div>
+	<div class="footer__bottom">
+		<div class="container container--center">
+			<div class="row">
+				<div class="col-sm-6 col-md-3">
+					<div class="footer__info">
+						<p><span class="footer__highlight"><strong>Address:</strong></span></p>
+						<p>Stephen Scott & Company Solicitors<br>
+						45 Court Street<br>Newtownards<br>Co Down<br>BT23 3NX</p>
+					</div>
+				</div>
+				<div class="col-sm-6 col-md-3">
+					<div class="footer__info">
+						<p><span class="footer__highlight"><strong>Contact us:</strong></span></p>
+						<p><strong>Tel:</strong> 028 9182 1700 <br>
+						<strong>Fax:</strong> 028 9182 1332</p>
+						<p><span class="footer__highlight"><strong>Email:</strong></span></p>
+						<p><a href="mailto:info@stephenscottsolicitors.com" class="footer__link">info@stephenscottsolicitors.com</a></p>
+					</div>
+				</div>
+				<div class="col-md-6">
+					<nav class="footer__nav">
+						<ul class="footer__list">
+							<li class="footer__option"><a href="#" class="footer__link">About Us</a></li>
+							<li class="footer__option"><a href="#" class="footer__link">Useful links</a></li>
+							<li class="footer__option"><a href="#" class="footer__link">Contact us</a></li>
+						</ul>
+						<p><span class="footer__highlight"><strong>Services:</strong></span></p>
+						<ul class="footer__list">
+							{% for footerLink in footerMenu %}
+							<li class="footer__option"><a href="#" class="footer__link">{{ footerLink }}</a></li>
+							{% endfor %}
+						</ul>
+					</nav>
+				</div>
+			</div>
+		</div>
+	</div>
+</footer>
