@@ -8,6 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#fff">
     <meta name="format-detection" content="telephone=no">
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet">
     <link rel="stylesheet" media="all" type="text/css" href="css/app.css">
     {# {% include "../partials/_media-tags.html" %} #}
   </head>
@@ -18,6 +19,10 @@
       {% include "partials/_header.html" %}
       {% block content %}{% endblock %}
       {% include "partials/_footer.html" %}
+      <div class="overlay js-overlay"></div>
+      <a href="#" class="back-up js-up">
+       <svg viewBox="0 0 24 24"><path fill="#FFA800" d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm0 7.58l5.995 5.988-1.416 1.414L12 10.408l-4.59 4.574-1.416-1.414L12 7.58z"/></svg>
+      </a>
     </div>
     <!-- END content -->
 

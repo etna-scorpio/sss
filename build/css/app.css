@@ -5711,8 +5711,14 @@ a.text-dark:hover, a.text-dark:focus {
 
 body {
   min-width: 320px;
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
   background: #fff;
   line-height: 1.4;
+}
+
+body.is-overflow {
+  overflow: hidden;
 }
 
 a:hover {
@@ -5721,6 +5727,22 @@ a:hover {
 
 .container.container--center {
   max-width: 1300px;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.4);
+  opacity: 0;
+  visibility: hidden;
+}
+
+.overlay.is-active {
+  opacity: 1;
+  visibility: visible;
 }
 
 .icon {
@@ -5740,6 +5762,26 @@ a:hover {
   width: 16px;
   height: 13px;
   background-position: -30px -25px;
+}
+
+.back-up {
+  position: fixed;
+  z-index: 10;
+  display: block;
+  width: 40px;
+  height: 40px;
+  right: 20px;
+  bottom: 20px;
+  background: #fff;
+  border-radius: 50%;
+  opacity: 0;
+  visibility: hidden;
+  box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.7);
+}
+
+.back-up.is-visible {
+  opacity: 1;
+  visibility: visible;
 }
 
 .header {
@@ -5782,10 +5824,6 @@ a:hover {
 
 .logo {
   max-width: 200px;
-}
-
-.logo__pic {
-  max-width: 100%;
 }
 
 .navigation__list {
@@ -5864,17 +5902,89 @@ a:hover {
   transition: opacity 0.2s ease, visibility 0.2s ease;
 }
 
+.navigation-dropdown__option:last-child .navigation-dropdown__link {
+  border-radius: 0 0 4px 4px;
+}
+
 .navigation-dropdown__link {
   display: block;
   padding: 8px 15px;
   color: #000;
-  font-weight: 600;
+  font-size: 15px;
+  font-weight: 700;
   line-height: 1.2;
 }
 
 .navigation-dropdown__link:hover {
   background: #eef1f5;
   color: inherit;
+}
+
+.nav-icon {
+  position: relative;
+  display: inline-block;
+  width: 30px;
+  height: 20px;
+}
+
+.nav-icon:before, .nav-icon:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: #fff;
+}
+
+.nav-icon:before {
+  top: 0;
+}
+
+.nav-icon:after {
+  bottom: 0;
+}
+
+.nav-icon span {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  margin-top: -1px;
+  width: 100%;
+  height: 2px;
+  background: #fff;
+}
+
+.close-icon {
+  position: relative;
+  display: inline-block;
+  width: 30px;
+  height: 20px;
+  margin: 10px 10px 10px 0;
+}
+
+.close-icon:hover:before, .close-icon:hover:after {
+  background: red;
+}
+
+.close-icon:before, .close-icon:after {
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: #ffa800;
+  transition: background 0.2s ease;
+}
+
+.close-icon:before {
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.close-icon:after {
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg);
 }
 
 .footer__top {
@@ -5919,9 +6029,9 @@ a:hover {
 }
 
 .hero__img {
-  height: 370px;
+  height: 380px;
   background-size: cover;
-  background-position: 50% 100%;
+  background-position: 50% 0%;
   background-repeat: no-repeat;
 }
 
@@ -5931,22 +6041,18 @@ a:hover {
   color: #3B3444;
 }
 
-.content__img--top-right {
+.content__img--top-left {
   display: block;
   margin: 0 auto 15px;
 }
 
 /* features */
-.features {
-  margin-top: 50px;
-}
-
 .feature-card {
   position: relative;
-  display: block;
   max-width: 300px;
   min-height: 250px;
   margin: 0 auto 30px;
+  padding: 30px 0;
   background-color: #e2dcec;
   background-repeat: no-repeat;
   background-size: cover;
@@ -5985,9 +6091,9 @@ a:hover {
   position: relative;
   margin-bottom: 0;
   font-size: 19px;
-  font-weight: 500;
+  font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 0.4px;
+  letter-spacing: 0.7px;
 }
 
 .feature-card__text:before {
@@ -7888,8 +7994,8 @@ a:hover {
     text-align: center !important;
   }
 
-  .content__img--top-right {
-    margin-left: 20px;
+  .content__img--top-left {
+    margin-right: 20px;
   }
 }
 
@@ -9535,12 +9641,14 @@ a:hover {
 
   .navigation {
     position: fixed;
-    background: #fff;
-    color: #000;
+    z-index: 10;
     top: 0;
     right: 0;
     bottom: 0;
-    z-index: 10;
+    width: 250px;
+    overflow: auto;
+    background: #fff;
+    color: #000;
     opacity: 0;
     transform: translate3d(110%, 0, 0);
     transition: opacity 0.3s ease, transform 0.5s ease;
@@ -9553,7 +9661,6 @@ a:hover {
 
   .navigation__list {
     display: block;
-    width: 250px;
   }
 
   .navigation__link {
@@ -9615,6 +9722,10 @@ a:hover {
   .navbar-expand-sm > .container-fluid {
     padding-right: 0;
     padding-left: 0;
+  }
+
+  .navigation {
+    width: 100%;
   }
 }
 
