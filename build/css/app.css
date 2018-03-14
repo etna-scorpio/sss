@@ -6041,6 +6041,11 @@ a:hover {
   color: #3B3444;
 }
 
+.content__in--center {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
 .content__img--top-left {
   display: block;
   margin: 0 auto 15px;
