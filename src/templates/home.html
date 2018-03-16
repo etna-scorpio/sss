@@ -27,7 +27,7 @@ title: Home page
 		<div class="row justify-content-center align-items-center">
 			{% for feature in features %}
 			<div class="col-xs-1 col-sm-6 col-md-4">
-				<a href="#" class="feature-card d-flex align-items-center" style="background-image: url(img/feature{{loop.index}}.jpg)">
+				<a href="{{ feature | lower | replace(' ', '-') | replace('&', 'and')}}.html" class="feature-card d-flex align-items-center" style="background-image: url(img/feature{{loop.index}}.jpg)">
 					<div class="feature-card__el"><p class="feature-card__text">{{ feature }}</p></div>
 				</a>
 			</div>

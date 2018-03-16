@@ -1,0 +1,44 @@
+---
+title: Useful links
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+<main class="content">
+	<div class="container container--center">
+		<div class="row justify-content-md-center align-items-center">
+
+			{% set usefulLinks = [{
+				link: 'https://www.lawsoc-ni.org/',
+				logo: 'law-society-logo.png',
+				alt: 'Law of Society'
+			},{
+				link: 'https://belfast-solicitors-association.org/',
+				logo: 'belfast-logo.png',
+				alt: 'Belfast Solicitors'
+			},{
+				link: 'https://www.legal-island.com/',
+				logo: 'legal-island-logo.png',
+				alt: 'Legal Island'
+			},{
+				link: 'https://www.investni.com/',
+				logo: 'invest-ni-logo.png',
+				alt: 'Invest Northern Ireland'
+			},{
+				link: 'https://www.discovernorthernireland.com/',
+				logo: 'discover-ni-logo.png',
+				alt: 'Discover Northern Ireland'
+			}] %}
+
+			{% for item in usefulLinks %}
+			<div class="col-xs-1 col-sm-6 col-md-4">
+				<div class="useful-link">
+					<a href="{{ item.link }}" class="useful-link__logo"><img class="img-fluid" src="img/{{ item.logo }}" alt="{{ item.alt }}"></a>
+					<p class="useful-link__text">{{ item.alt | safe }}</p>
+				</div>
+			</div>
+			{% endfor %}
+		</div>
+	</div>
+</main>
+{% endblock %}
