@@ -35,7 +35,7 @@
 						<p><span class="footer__highlight"><strong>Services:</strong></span></p>
 						<ul class="footer__list">
 							{% for footerLink in footerMenu %}
-							<li class="footer__option"><a href="#" class="footer__link">{{ footerLink }}</a></li>
+							<li class="footer__option"><a href="{{ footerLink | lower | replace(' ', '-') | replace('&', 'and') }}.html" class="footer__link">{{ footerLink }}</a></li>
 							{% endfor %}
 						</ul>
 					</nav>

@@ -37,7 +37,9 @@
 									<span class="navigation__link navigation__link--pointer"><span>{{ navLink }}</span></span>
 									<ul class="navigation-dropdown">
 										{% for item in dropdownMenu %}
-										<li class="navigation-dropdown__option"><a href="#" class="navigation-dropdown__link">{{ item }}</a></li>
+										<li class="navigation-dropdown__option">
+											<a href="{{ item | lower | replace(' ', '-') | replace('&', 'and')}}.html" class="navigation-dropdown__link">{{ item }}</a>
+										</li>
 										{% endfor %}
 									</ul>
 								</li>

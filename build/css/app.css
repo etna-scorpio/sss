@@ -5712,7 +5712,7 @@ a.text-dark:hover, a.text-dark:focus {
 body {
   min-width: 320px;
   font-family: 'Lato', sans-serif;
-  font-weight: 400;
+  font-weight: normal;
   background: #fff;
   line-height: 1.4;
 }
@@ -5745,6 +5745,23 @@ a:hover {
   visibility: visible;
 }
 
+/* titles */
+.title-h1,
+.title-h2,
+.title-h3,
+.title-h4,
+.title-h5,
+.title-h6 {
+  font-family: 'Roboto Slab', serif;
+  font-weight: normal;
+}
+
+.title-h1 {
+  margin-bottom: 50px;
+  font-weight: 300;
+}
+
+/* icons */
 .icon {
   display: inline-block;
   vertical-align: middle;
@@ -6051,6 +6068,31 @@ a:hover {
   margin: 0 auto 15px;
 }
 
+.content__list {
+  margin: 20px 0;
+  list-style-type: disc;
+  padding-left: 30px;
+}
+
+.content__list li {
+  margin-bottom: 5px;
+}
+
+.content__list li:last-child {
+  margin-bottom: 0;
+}
+
+.content__link {
+  margin: 0 1px;
+  padding: 2px 3px 4px;
+  background: #55298A;
+  color: #fff;
+}
+
+.content__link:hover, .content__link:active, .content__link:visited {
+  color: #fff;
+}
+
 /* features */
 .feature-card {
   position: relative;
@@ -6111,6 +6153,53 @@ a:hover {
   margin-left: -10%;
   border-bottom: 2px solid #fff;
   transition: border-color .4s linear;
+}
+
+/* services */
+
+.service-list {
+  max-width: 350px;
+  text-align: left;
+  background: #fff;
+  margin-bottom: 0;
+  padding: 20px 15px;
+  border-radius: 4px;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+.service-list__option {
+  position: relative;
+  margin-bottom: 5px;
+  padding-left: 15px;
+}
+
+.service-list__option:before {
+  content: "";
+  position: absolute;
+  width: 8px;
+  height: 3px;
+  top: 10px;
+  left: 0;
+  background: #ffa800;
+}
+
+.service-list__link {
+  position: relative;
+  color: #000;
+  border-bottom: 1px solid transparent;
+}
+
+.service-list__link:hover {
+  color: #000;
+  border-color: #000;
+}
+
+.service-list__link.is-active {
+  color: #ffa800;
+}
+
+.service-list__link.is-active:hover {
+  border-bottom-color: transparent;
 }
 
 @media print {
@@ -9644,6 +9733,15 @@ a:hover {
     padding-left: 0;
   }
 
+  .title-h1 {
+    margin-bottom: 30px;
+    font-size: 2rem;
+  }
+
+  .title-h2 {
+    font-size: 1.7rem;
+  }
+
   .navigation {
     position: fixed;
     z-index: 10;
@@ -9706,6 +9804,15 @@ a:hover {
   .footer__nav {
     padding: 30px 0 0;
     border-top: 1px solid #fff;
+  }
+
+  .services {
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  .service-list {
+    margin: 0 auto;
   }
 }
 

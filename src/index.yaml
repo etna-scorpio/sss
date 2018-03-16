@@ -5,3 +5,16 @@ PageList:
   ready: 100%
 - file: about-us.html
   ready: 100%
+- file: personal-injury.html
+  ready: 100%
+- file: buying-and-selling-property.html
+  ready: 100%
+- file: business-law.html
+  ready: 100%
+- file: employment-law.html
+  ready: 100%
+- file: matrimonial-law.html
+  ready: 100%
+- file: wills-and-estates.html
+  ready: 100%
+
