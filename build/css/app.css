@@ -5885,14 +5885,14 @@ a:hover {
   display: none;
 }
 
-.navigation__link__el {
+.navigation__el {
   position: relative;
   display: block;
   padding-bottom: 5px;
   overflow: hidden;
 }
 
-.navigation__link__el:before {
+.navigation__el:before {
   content: "";
   position: absolute;
   bottom: 0;
@@ -9805,11 +9805,11 @@ a:hover {
     border-bottom: none;
   }
 
-  .navigation__link__el {
+  .navigation__el {
     padding-bottom: 0;
   }
 
-  .navigation__link__el:before {
+  .navigation__el:before {
     display: none;
   }
 
