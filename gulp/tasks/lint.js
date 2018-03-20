@@ -37,7 +37,7 @@ gulp.task('lint:sass', function() {
 });
 
 gulp.task('lint', [
-    
-    'lint:sass',
+
+    // 'lint:sass',
     'lint:html'
 ]);
