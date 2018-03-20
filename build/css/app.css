@@ -5801,6 +5801,19 @@ a:hover {
   visibility: visible;
 }
 
+.button {
+  padding: 10px 15px;
+  color: #fff;
+  background-color: #55298A;
+  border-radius: 4px;
+  letter-spacing: 0.1px;
+  transition: background-color 0.2s ease;
+}
+
+.button:hover {
+  background-color: #6d35b1;
+}
+
 .header {
   background: #55298A;
   border-bottom: 1px solid #e2dcec;
@@ -6224,6 +6237,10 @@ a:hover {
   opacity: 0;
   visibility: hidden;
   transition: all 0.3s ease;
+}
+
+.map iframe {
+  width: 100%;
 }
 
 @media print {

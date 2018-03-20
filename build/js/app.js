@@ -44,7 +44,7 @@
 /* 0 */
 /***/ (function(module, exports, __webpack_require__) {
 
-	eval("'use strict';\n\n__webpack_require__(1);\n\n__webpack_require__(2);\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiMC5qcyIsInNvdXJjZXMiOlsid2VicGFjazovLy9zcmMvanMvYXBwLmpzPzcxNmYiXSwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0ICcuL21vYmlsZS1uYXYuanMnO1xyXG5pbXBvcnQgJy4vc2Nyb2xsLXRvLXRvcC5qcyc7XG5cblxuLy8gV0VCUEFDSyBGT09URVIgLy9cbi8vIHNyYy9qcy9hcHAuanMiXSwibWFwcGluZ3MiOiI7O0FBQUE7QUFDQTtBQUFBIiwic291cmNlUm9vdCI6IiJ9");
+	eval("'use strict';\n\n__webpack_require__(1);\n\n__webpack_require__(2);\n\n__webpack_require__(10);\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiMC5qcyIsInNvdXJjZXMiOlsid2VicGFjazovLy9zcmMvanMvYXBwLmpzPzcxNmYiXSwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0ICcuL21vYmlsZS1uYXYuanMnO1xyXG5pbXBvcnQgJy4vc2Nyb2xsLXRvLXRvcC5qcyc7XHJcbmltcG9ydCAnLi9mb3JtLXZhbGlkYXRpb24uanMnO1xuXG5cbi8vIFdFQlBBQ0sgRk9PVEVSIC8vXG4vLyBzcmMvanMvYXBwLmpzIl0sIm1hcHBpbmdzIjoiOztBQUFBO0FBQ0E7QUFBQTtBQUNBO0FBQUEiLCJzb3VyY2VSb290IjoiIn0=");
 
 /***/ }),
 /* 1 */
@@ -99,6 +99,12 @@
 /***/ (function(module, exports) {
 
 	eval("\"use strict\";\nObject.defineProperty(exports, \"__esModule\", { value: true });\nexports.USER_SCROLL_EVENTS = ['mousedown', 'wheel', 'DOMMouseScroll', 'mousewheel', 'keyup', 'touchmove'];\n\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiOS5qcyIsInNvdXJjZXMiOlsid2VicGFjazovLy9DOi9Vc2Vycy9ldG5hL0Rlc2t0b3AvdXB3b3JrL3Nzcy9+L3Njcm9sbC10by1wb3NpdGlvbi9kaXN0L3NyYy91c2VyLXNjcm9sbC1ldmVudHMuanM/OTRmYiJdLCJzb3VyY2VzQ29udGVudCI6WyJcInVzZSBzdHJpY3RcIjtcbk9iamVjdC5kZWZpbmVQcm9wZXJ0eShleHBvcnRzLCBcIl9fZXNNb2R1bGVcIiwgeyB2YWx1ZTogdHJ1ZSB9KTtcbmV4cG9ydHMuVVNFUl9TQ1JPTExfRVZFTlRTID0gWydtb3VzZWRvd24nLCAnd2hlZWwnLCAnRE9NTW91c2VTY3JvbGwnLCAnbW91c2V3aGVlbCcsICdrZXl1cCcsICd0b3VjaG1vdmUnXTtcblxuXG5cbi8vLy8vLy8vLy8vLy8vLy8vL1xuLy8gV0VCUEFDSyBGT09URVJcbi8vIEM6L1VzZXJzL2V0bmEvRGVza3RvcC91cHdvcmsvc3NzL34vc2Nyb2xsLXRvLXBvc2l0aW9uL2Rpc3Qvc3JjL3VzZXItc2Nyb2xsLWV2ZW50cy5qc1xuLy8gbW9kdWxlIGlkID0gOVxuLy8gbW9kdWxlIGNodW5rcyA9IDAiXSwibWFwcGluZ3MiOiJBQUFBO0FBQ0E7QUFDQTsiLCJzb3VyY2VSb290IjoiIn0=");
+
+/***/ }),
+/* 10 */
+/***/ (function(module, exports) {
+
+	eval("'use strict';\n\nwindow.addEventListener('load', function () {\n\t// Fetch all the forms we want to apply custom Bootstrap validation styles to\n\tvar forms = document.getElementsByClassName('needs-validation');\n\t// Loop over them and prevent submission\n\tvar validation = Array.prototype.filter.call(forms, function (form) {\n\t\tform.addEventListener('submit', function (event) {\n\t\t\tif (form.checkValidity() === false) {\n\t\t\t\tevent.preventDefault();\n\t\t\t\tevent.stopPropagation();\n\t\t\t}\n\t\t\tform.classList.add('was-validated');\n\t\t}, false);\n\t});\n}, false);\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiMTAuanMiLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vc3JjL2pzL2Zvcm0tdmFsaWRhdGlvbi5qcz9iNzc3Il0sInNvdXJjZXNDb250ZW50IjpbIndpbmRvdy5hZGRFdmVudExpc3RlbmVyKCdsb2FkJywgZnVuY3Rpb24oKSB7XHJcblx0Ly8gRmV0Y2ggYWxsIHRoZSBmb3JtcyB3ZSB3YW50IHRvIGFwcGx5IGN1c3RvbSBCb290c3RyYXAgdmFsaWRhdGlvbiBzdHlsZXMgdG9cclxuXHR2YXIgZm9ybXMgPSBkb2N1bWVudC5nZXRFbGVtZW50c0J5Q2xhc3NOYW1lKCduZWVkcy12YWxpZGF0aW9uJyk7XHJcblx0Ly8gTG9vcCBvdmVyIHRoZW0gYW5kIHByZXZlbnQgc3VibWlzc2lvblxyXG5cdHZhciB2YWxpZGF0aW9uID0gQXJyYXkucHJvdG90eXBlLmZpbHRlci5jYWxsKGZvcm1zLCBmdW5jdGlvbihmb3JtKSB7XHJcblx0XHRmb3JtLmFkZEV2ZW50TGlzdGVuZXIoJ3N1Ym1pdCcsIGZ1bmN0aW9uKGV2ZW50KSB7XHJcblx0XHRcdGlmIChmb3JtLmNoZWNrVmFsaWRpdHkoKSA9PT0gZmFsc2UpIHtcclxuXHRcdFx0XHRldmVudC5wcmV2ZW50RGVmYXVsdCgpO1xyXG5cdFx0XHRcdGV2ZW50LnN0b3BQcm9wYWdhdGlvbigpO1xyXG5cdFx0XHR9XHJcblx0XHRcdGZvcm0uY2xhc3NMaXN0LmFkZCgnd2FzLXZhbGlkYXRlZCcpO1xyXG5cdFx0fSwgZmFsc2UpO1xyXG5cdH0pO1xyXG59LCBmYWxzZSk7XHJcblxuXG5cbi8vIFdFQlBBQ0sgRk9PVEVSIC8vXG4vLyBzcmMvanMvZm9ybS12YWxpZGF0aW9uLmpzIl0sIm1hcHBpbmdzIjoiOztBQUFBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBOyIsInNvdXJjZVJvb3QiOiIifQ==");
 
 /***/ })
 /******/ ]);

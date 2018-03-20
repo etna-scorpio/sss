@@ -1,0 +1,54 @@
+---
+title: Contact us
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+<main class="content">
+	<div class="container container--center">
+		<div class="row">
+			<div class="col">
+				<div class="content__in content__in--center">
+					<h1 class="title-h1 text-center">Contact Us</h1>
+					<div class="row justify-content-center">
+						<div class="col-sm-8 col-md-5 mb-5">
+							<address class="d-block"><strong>Address:</strong><br>
+							Stephen Scott & Company Solicitors<br>
+							45 Court Street<br>Newtownards<br>Co Down<br>BT23 3NX</address>
+							<p><strong>Opening hours:</strong><br>
+							Monday to Friday 9.00 AM - 5.00 PM<br>Saturday and Sunday - closed.</p>
+							<p><strong>Tel:</strong> 028 9182 1700 <br>
+							<strong>Fax:</strong> 028 9182 1332</p>
+							<p><strong>Email: </strong><a href="mailto:info@stephenscottsolicitors.com" class="content__link">info@stephenscottsolicitors.com</a></p>
+							<div class="map mt-4">
+								<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2311.711633398363!2d-5.69812908437986!3d54.59145508025881!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x486174f17bba8547%3A0x9e9679a066871b3d!2zNDUgQ291cnQgU3QsIE5ld3Rvd25hcmRzIEJUMjMgN05YLCDQktC10LvQuNC60L7QsdGA0LjRgtCw0L3QuNGP!5e0!3m2!1sru!2sua!4v1521480968746" width="400" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
+							</div>
+						</div>
+						<div class="col-sm-8 col-md-4 offset-lg-1 mb-3">
+							<form class="needs-validation" method="POST" action="https://formspree.io/info@stephenscottsolicitors.com" novalidate>
+								<div class="form-group">
+									<input type="text" class="form-control" name="name" placeholder="Your name" required>
+									<div class="invalid-feedback">Please enter your name.</div>
+								</div>
+								<div class="form-group">
+									<input type="email" class="form-control" name="_replyto" placeholder="Your email" required>
+									<div class="invalid-feedback">Please enter your email.</div>
+								</div>
+								<div class="form-group">
+									<input type="tel" class="form-control" name="phone" placeholder="Your contact number" required>
+									<div class="invalid-feedback">Please enter contact number.</div>
+								</div>
+								<div class="form-group">
+									<textarea class="form-control" name="message" placeholder="Your message"></textarea>
+									<input type="text" name="_gotcha" style="display:none"/>
+								</div>
+								<button type="submit" class="button">SEND</button>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</main>
+{% endblock %}
