@@ -1,10 +1,15 @@
 .hero
 	&__img
-		height: 380px
+		height: 525px
 		background-size: cover
 		background-position: 50% 0%
-		// background-position: 30% 30%
 		background-repeat: no-repeat
+		+media-breakpoint-up(lg)
+			height: 560px
+		+media-breakpoint-down(md)
+			height: 400px
+		+media-breakpoint-down(sm)
+			height: 350px
 
 
 .content
@@ -138,8 +143,6 @@
 	margin-bottom: 40px
 	+media-breakpoint-down(sm)
 		margin-bottom: 100px
-		&:last-child
-			margin-bottom: 50px
 	&:hover
 		.useful-link__text
 			opacity: 1
