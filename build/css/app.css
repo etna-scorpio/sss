@@ -2022,6 +2022,8 @@ a:hover { text-decoration: none; }
 
 .button:hover { background-color: #6d35b1; }
 
+.figure--max-w { max-width: 500px; }
+
 .header { background: #55298A; border-bottom: 1px solid #e2dcec; }
 
 .header__top { padding: 5px 0 13px; background-color: #6A4299; background-image: linear-gradient(#6A4299 85%, #401870 100%); }
@@ -2109,6 +2111,8 @@ a:hover { text-decoration: none; }
 .content { background: #eee; padding: 50px 0 40px; color: #3B3444; }
 
 .content__in--center { max-width: 1000px; margin: 0 auto; }
+
+.content__img { max-width: 500px; }
 
 .content__img--top-left { display: block; margin: 0 auto 15px; }
 
